@@ -11,7 +11,7 @@
 :point_right: **command as follows** :
 
 ```shell
-mkdir -p ex02 && echo ls -m > ./ex02/midLS && chmod 777 ./ex02/midLS
+mkdir -p ex02 && echo "ls -m" > ./ex02/midLS && chmod 777 ./ex02/midLS
 ```
 Make directory with command `mkdir  -p [directory name]` <br>
 Create file with command `echo [text] > [address file/file name]`
