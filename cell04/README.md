@@ -88,7 +88,6 @@ Example :
 
 ```shell
 $ sh argv.sh Hello world ! 42
-Hello world ! 42
 Hello
 world
 !
