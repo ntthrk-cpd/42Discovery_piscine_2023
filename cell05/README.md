@@ -31,7 +31,7 @@ fi
 That is, change `echo $1` to `mkdir ex$1`.
 
 [Code : argv.sh](https://github.com/ntthrk-cpd/42Discovery_piscine_2023/blob/main/cell04/ex04/argv.sh) <br>
-[Code : build.sh]()
+[Code : build.sh](https://github.com/ntthrk-cpd/42Discovery_piscine_2023/blob/main/cell05/ex05/build.sh)
 
 **Step 3** : Test
 
