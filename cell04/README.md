@@ -55,4 +55,4 @@ Definition: https://www.tutorialspoint.com/unix/unix-special-variables.htm
 
 ***2.1 Write Script*** 
 
-[argv.sh](cell04/ex04/argv.sh)
+[argv.sh](https://github.com/ntthrk-cpd/42Discovery_piscine_2023/blob/main/cell04/ex04/argv.sh)
