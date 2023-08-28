@@ -53,6 +53,47 @@ Definition: https://www.tutorialspoint.com/unix/unix-special-variables.htm
 
 <br>
 
-***2.1 Write Script*** 
+***2.2 Write Script*** 
 
-[argv.sh](https://github.com/ntthrk-cpd/42Discovery_piscine_2023/blob/main/cell04/ex04/argv.sh)
+Pseudo code : <br>
+
+```pseudo code
+if there are more than 0 arguments 
+  then while there are more than 0 arguments 
+      print the first argument 
+      shift the arguments 
+  done
+else
+  print "No arguments passed" 
+fi 
+```
+<sub>"Coding for each problem There may be several solutions. This is just one method."</sub><br>
+
+[Code : argv.sh](https://github.com/ntthrk-cpd/42Discovery_piscine_2023/blob/main/cell04/ex04/argv.sh) 
+
+<br>
+
+**Step 3** : Test
+
+commannd : 
+```shell
+sh argv.sh 
+```
+or
+```shell
+./argv.sh 
+```
+
+Example : 
+
+```shell
+$ sh argv.sh Hello world ! 42
+Hello world ! 42
+Hello
+world
+!
+42
+$
+```
+
+If it doesn't run, use the chmod command to grant permissions first. or check code agin.
