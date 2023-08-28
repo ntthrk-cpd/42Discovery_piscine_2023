@@ -1,0 +1,69 @@
+<!--
+    Copy your table from the cell1-5 and make it responsive to the browser resizing. The
+table must shrink. The table must cover your entire web page. Do as you wish but do not
+listen to the Javascript pros that will say that it can’t be done without it. Stay on CSS.
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <header>
+        <title>Responsive</title>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                text-align: center;
+                color: white;
+                font-family: sans-serif;
+                font-size: 2em;
+                
+            }
+            table {
+                border-collapse: collapse;
+                white-space: nowrap;
+                width: 100vw;
+                height:100vh;
+            }
+            table .td-laft {
+                width: 50%;
+                background-color: #BDB76B;
+            }
+            table .td-right {
+                width: 50%;
+                background-color: #FFCC99;
+                 
+            }
+        </style>
+    </header>
+    <body>
+        <table>
+            <td class="td-laft">
+                <p>First cell</p>
+            </td>
+            <td class="td-right">
+                <p>Second cell</p>
+            </td>
+        </table>
+    </body>
+</html>
+
+<!-- 
+    Style Description:
+    body: is set to the default body of the browser
+        - margin: 0; margin is the space between the border and the browser. so, set to 0 is no space.
+        - padding: 0; pandding is the space between the content and the border.
+        - text-align: center; is set text to the center of the browser
+        - color: white; is set color to white
+        - font-family: sans-serif; is set to the default font of the browser 
+        - font-size: 2em; is the same as 32px (16px * 2) 
+    table: is set to the default table of the browser
+        - border-collapse: collapse; border-collapse is the space between the border and the content. so, set to collapse is no space.
+        - white-space: nowrap; white-space is the space between the content and the border. so, set to nowrap is no space.
+        - width: 100vw; width is the width of the table. so, set to 100vw is the width of the browser.
+        - height:100vh; height is the height of the table. so, set to 100vh is the height of the browser.
+    table .td-laft: is set to table left cell
+        - width: 50%; 50% is the half of the table
+        - background-color: #BDB76B; #BDB76B is the color of the cell
+    table .td-right: is set to table right cell
+        - width: 50%; 
+        - background-color: #FFCC99;
+ -->
