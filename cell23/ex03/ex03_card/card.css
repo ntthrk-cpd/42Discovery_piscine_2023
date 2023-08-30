@@ -1,0 +1,49 @@
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    text-align: center;
+    background-color: #f1f1f1;
+}
+
+h1 {
+    text-align: center;
+    margin: auto auto;
+    padding-top: 50px;
+}
+
+/* card */
+.card {
+    width: 300px;
+    height: auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    position: relative;
+    margin: 50px auto;
+}
+
+.card h4 {
+    padding: 20px 0;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.card__icon {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.card .footer {
+    padding: 20px 0;
+    color: #fff;
+    background-color: #000000;
+}
