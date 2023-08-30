@@ -1,0 +1,133 @@
+@font-face {
+    font-family: "DancingScript-VariableFont_wght";
+    src: url(./resources/DancingScript-VariableFont_wght.ttf);
+}
+
+body {
+    box-sizing: border-box;
+    background-color: #696969;
+}
+
+ul {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    list-style: none;
+}
+
+.gradiant-bg{
+    background: linear-gradient(342deg, #000000,  #424242, #696969, #424242, #000000);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "header header header header"
+        "menu-left content content menu-right";
+    width: 1024px;
+    margin: auto auto;
+}
+
+.header {
+    display: flex;
+    background-color: #b6b6b6;
+    box-shadow: 10px 10px 5px rgb(42, 42, 42);
+    border-radius: 10px;
+    grid-area: header;
+    margin: 10px;
+    padding: 10px;
+    height: 150px;
+}
+
+.header h1 {
+    margin: auto auto;
+    font-size: 72px;
+    font-weight: bold;
+    font-family: "DancingScript-VariableFont_wght";
+    padding: 10px;
+}
+
+.content {
+    display: flex;
+    background-color: #b6b6b6;
+    box-shadow: 10px 10px 5px rgb(42, 42, 42);
+    border-radius: 10px;
+    margin: auto auto;
+    padding: auto auto;
+    grid-area: content;
+    align-items: center;
+    width: 1024px;
+    height: 700px;
+}
+
+.content img {
+    width: 95%;
+    margin: auto auto;
+}
+
+.menu {
+    background-color: #b6b6b6;
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px rgb(42, 42, 42);
+    margin: 10px;
+    padding: 10px;
+    height: 450px;
+    width: 200px;
+}
+
+.menu-left {
+    display: flex;
+    grid-area: menu-left;
+}
+
+.menu-right {
+    display: flex;
+    grid-area: menu-right;
+}
+
+.icon {
+    width: 80px;
+    height: auto;
+}
+
+.search-icon {
+    float: right;
+    margin: 10px;
+}
+
+.search-icon img {
+    width: 120px;
+    height: auto;
+}
+
+/* บล็อกลอยชิดมุมซ้ายล่าง css */
+.block-input {
+    font-family: Arial, Helvetica, sans-serif;
+    display: block;
+    background-color: #a2ff95;
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px rgb(42, 42, 42);
+    width: 450px;
+    height: 150px;
+    margin-right: 300px;
+    margin-bottom: 100px;
+}
+
+.block-input p {
+    font-size: 16px;
+    padding: 10px;
+
+}
+
+.block-input span {
+    font-size: 24px;
+    padding: 10px;
+}
