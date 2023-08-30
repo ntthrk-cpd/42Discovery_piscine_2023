@@ -1,0 +1,52 @@
+/* In this exercise we will create a web page using parallax scrolling (effect of parallax or parallax). To carry out this project you have to create a web page. The page has to have at least two images. When the page is executed,
+an image should be displayed in the background with a small message in the center of the page. when progress is made Down the page,
+you should see a black block with the message of your choice. Finally,
+if you scroll to the bottom of the page,
+you should see the second image with another message also in the center. You can use any images you want. 
+*/
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.title {
+    background-color: black;
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    padding: 1rem;
+    max-width: 100%;
+
+}
+
+.cantianer {
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    perspective: 1px;
+    perspective-origin: 0 0;
+}
+
+.parallax__layer {
+    background-attachment: fixed;
+}
+
+.img-one {
+    background-image: url( "../ex02_doft/resources/teen-boy-and-black-cat-on-street-1.png");
+}
+
+.img--two {
+    background-image: url("../ex02_doft/resources/teen-boy-and-black-cat-on-street-2.png");
+    
+}
+
