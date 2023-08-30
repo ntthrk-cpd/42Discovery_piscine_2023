@@ -9,44 +9,52 @@ you should see the second image with another message also in the center. You can
 body {
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
+    color: aliceblue;
 }
 
-img {
-    display: block;
-    width: 100%;
-    height: auto;
+h1 {
+    text-align: center;
+    font-size: 6em;
+    font-family: monospace;
+    margin: 0;
 }
 
-.title {
+p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1em;
+    text-align: center;
+    top: 50%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.block-title {
     background-color: black;
     color: white;
-    font-size: 2rem;
-    text-align: center;
-    padding: 1rem;
-    max-width: 100%;
-
+    height: 100px;;
 }
 
-.cantianer {
-    width: 100%;
-    height: 100vh;
-    overflow-x: hidden;
-    overflow-y: auto;
-    perspective: 1px;
-    perspective-origin: 0 0;
-}
-
-.parallax__layer {
+.parallax {
+    background-color: darkblue;
     background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
 }
 
-.img-one {
+.text {
+    width: 60%;
+    margin: 0 auto;
+}
+
+#img-one {
     background-image: url( "../ex02_doft/resources/teen-boy-and-black-cat-on-street-1.png");
 }
 
-.img--two {
+#img-two {
     background-image: url("../ex02_doft/resources/teen-boy-and-black-cat-on-street-2.png");
-    
 }
+
 
