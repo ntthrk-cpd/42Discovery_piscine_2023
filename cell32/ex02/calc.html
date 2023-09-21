@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            calc
+        </title>
+    </head>
+    
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            
+            body {
+                width: 100vw;
+                height: 100vh;
+                background-color: #d0d0d0;
+            }
+            
+            div {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            input[type=text]  {
+                padding: 10px;
+                margin: 1rem;
+                border-radius: 10px;
+                border-style: none;
+            }
+
+            select {
+                border: none;
+                padding: 10px;
+                margin: 1rem;
+                border-radius: 5px;
+                background-color: #424242;
+                color: white;
+            }
+            select:focus{
+                outline:none;
+                
+            }
+
+            input[type=submit] {
+                border: none;
+                padding: 10px;
+                margin: 1rem;
+                border-radius: 5px;
+                background-color: #424242;
+                color: white;
+                cursor: pointer;
+            }
+
+            input[type=submit]:hover {
+                font-size: large;
+            }
+
+            p {
+                color: #424242;
+                margin: 1rem;
+                font-size: 2rem;
+            }
+
+            @keyframes blink {
+                span {
+                    opacity: 1;
+                }
+
+                50% {
+                    opacity: 0;
+                }
+            }
+
+            span {
+                animation: blink 1s linear infinite;
+            }
+
+        </style>
+        <script>
+            function calculator()
+            {
+                var num1 = document.getElementsByName("num1")[0].value;
+                var num2 = document.getElementsByName("num2")[0].value;
+                var operation = document.getElementById("operation").value;
+                var result = 0;
+                const result_id =  document.getElementById("result");
+
+                if (num1 === "" || num2 === "" || operation === "" || isNaN(num1) || isNaN(num2)) {
+                    alert("’Error :(’, invalid input.");
+                    return false;
+                }
+                if ((operation === "div" && num2 === "0") || (operation === "mod" && num2 === "0")) {
+                    alert("It’s over 9000!");
+                    return false;
+                }
+                if (num1 < 0 || num2 < 0){
+                    alert("’Error :(’, negative numbers are not allowed.");
+                    return false;
+                }
+                if (operation == "add")
+                    result = parseInt(num1) + parseInt(num2);
+                else if (operation == "sub")
+                    result = parseInt(num1) - parseInt(num2);
+                else if (operation == "mul")
+                    result = parseInt(num1) * parseInt(num2);
+                else if (operation == "div")
+                    result = parseInt(num1) / parseInt(num2);
+                else if (operation == "mod")
+                    result = parseInt(num1) % parseInt(num2);
+                
+                // Stop blinking and display instead of '? and replace it with the result of the operation.
+                if (result_id.textContent === "?"){
+                    result_id.style.animation = "none";
+                    result_id.textContent = result;
+                }
+                else
+                    result_id.textContent = result;
+            }
+        
+        // Every 30 seconds, an alert pop-up windows will appear saying ’Please, use me...’ 
+		function showAlert() {
+            const result_id =  document.getElementById("result");
+			alert("Please, use me...");
+            
+            if (result_id.textContent !== "?"){
+                result_id.textContent = "?";
+                result_id.style.animation = "blink 1s linear infinite";
+            }
+		}
+        setInterval(showAlert, 30000);
+        </script>
+    <body>
+        <div>
+            <form action="calc.html" method="post" name="calc">
+                <input class="text" type="text" name="num1" value="" pattern="[0-9]+"/>
+                <select name="operation" id="operation">
+                    <option value="" disabled selected>Select operation</option>
+                    <option value="add" id="add">+</option>
+                    <option value="sub" id="sub">-</option>
+                    <option value="mul" id="mul">*</option>
+                    <option value="div" id="div">/</option>
+                    <option value="mod" id="mod">%</option>
+                </select>
+                <input class="text" type="text" name="num2" value="" pattern="[0-9]+" />
+                <input type="submit" name="submit" value="Try me!" onclick="calculator()" />
+            </form>
+            <p>Result&emsp;:&emsp;<span id = "result">?</span></p>
+        </div>
+    </body>
+</html>
