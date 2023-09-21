@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            balloon
+        </title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            
+            body {
+                width: 100vw;
+                height: 100vh;
+                background-color: #d0d0d0;
+            }
+            
+            div {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            .balloon {
+                width: 200px;
+                height: 200px;
+                border-radius: 50%;
+                border-style: none;
+                box-shadow: -10px 90px 90px 45px rgba(0, 0, 0, 0.35);
+
+            }
+
+            .red {
+                background: radial-gradient(circle at 50% 45px, #a81818, #000000);
+            }
+
+            .green {
+                background: radial-gradient(circle at 50% 45px, #1da818, #000000);
+            }
+
+            .blue {
+                background: radial-gradient(circle at 50% 45px, #1862a8, #000000);
+            }
+
+        </style>
+        <script>
+            function changeColor(element) {
+                if (element.classList.contains("red")) {
+                    element.classList.remove("red");
+                    element.classList.add("green");
+                } else if (element.classList.contains("green")) {
+                    element.classList.remove("green");
+                    element.classList.add("blue");
+                } else if (element.classList.contains("blue")) {
+                    element.classList.remove("blue");
+                    element.classList.add("red");
+                }
+                return false;
+            }
+            function onHover(element) {
+                changeColor(element);
+                if (element.offsetWidth > 200) {
+                    element.style.width = element.offsetWidth - 5 + "px";
+                    element.style.height = element.offsetHeight - 5 + "px";
+                } else {
+                    element.style.width = "200px";
+                    element.style.height = "200px";
+                }
+            }
+
+            function handleClick(element) {
+                changeColor(element);
+                if (element.offsetWidth < 420) {
+                    element.style.width = element.offsetWidth + 10 + "px";
+                    element.style.height = element.offsetHeight + 10 + "px";
+                } else {
+                    element.style.width = "200px";
+                    element.style.height = "200px";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div class="balloon red" onmouseleave="onHover(this);" onclick="handleClick(this)"></div>
+    </body>
+</html>
