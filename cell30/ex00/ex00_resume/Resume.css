@@ -20,7 +20,8 @@ img {
 .contianer {
     display: block;
     background-color: #f6f6f6;
-    margin: 0 auto;
+    width: 100vw;
+    height: auto;
 }
 /* header */
 .header {
@@ -74,11 +75,11 @@ img {
 }
 
 .content h3 {
+    padding: 1rem;
+    margin: 1rem;
     text-align: center;
     align-items: center;
     font-weight: 800;
-    padding: 10px;
-    margin: 0.2rem 0;
     font-size: 1.5rem;
 }
 
@@ -101,25 +102,6 @@ img {
     margin: 0.2rem 0;
 }
 
-.content p {
-    text-align: left;
-    align-items: center;
-    font-weight: 400;
-    padding: 10px;
-    margin: 0.2rem 0;
-    font-size: 1rem;
-    text-indent: 2rem;
-}
-
-.content ul {
-    list-style-type: none;
-    text-align: left;
-    font-weight: 400;
-    padding: 10px;
-    margin: 0.2rem 0;
-    font-size: 1rem;
-}
-
 .content-right {
     display: inline-block;
     width: 70vw;
@@ -137,12 +119,120 @@ img {
 
 }
 
+.content-right p {
+    text-align: left;
+    align-items: center;
+    font-weight: 400;
+    padding: 1rem;
+    margin: auto 1rem;
+    font-size: 1rem;
+    text-indent: 2rem;
+}
+
 .content-left {
     display: inline-block;
     background-color: #c6c6c6;
     width: 30vw;
     height: auto;
 }
+ul {
+    list-style: none;
+    font-weight: 400;
+    padding: 10px;
+}
+
+ul#contact-tab li.email-icon, li.github-icon, li.linkedin-icon {
+    padding: 10px 30px;
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 20px;
+}
+
+ul#contact-tab li.email-icon {
+    background-image: url(./images_resume/email.png);
+}
+
+ul#contact-tab li.github-icon {
+    background-image: url(./images_resume/github-logo.png);
+}
+
+ul#contact-tab li.linkedin-icon {
+    background-image: url(./images_resume/linkedin.png);
+}
+
+.content-left a {
+    border-bottom: none;
+    color: #424242;
+    padding-bottom: .25em;
+    text-decoration: none;
+}
+
+.content-left a:hover {
+    color: #000;
+}
+
+ul#skills-tab li{
+    position: relative;
+    width: 100%;
+    border-radius: 4px;
+    background-color: #f6f6f6;
+    margin-bottom: 0.5em;
+    color: #424242;
+    text-align: left;
+    
+
+    .skill-percent-tab {
+        background-color: #424242;
+        position: absolute;
+        color: #f6f6f6;
+        text-overflow: clip;
+        overflow: hidden;
+    }
+
+    .skill-percent100 {
+        width: 100%;
+    }
+
+    .skill-percent80 {
+        width: 80%;
+    }
+    
+    .skill-percent70 {
+        width: 70%;
+    }
+
+    .skill-percent60 {
+        width: 60%;
+    }
+
+    .skill-percent50 {
+        width: 50%;
+    }
+
+    .skill-percent50 {
+        width: 50%;
+    }
+
+    .skill-percent40 {
+        width: 40%;
+    }
+
+    .skill-percent30 {
+        width: 30%;
+    }
+
+    .skill-percent20 {
+        width: 20%;
+    }
+
+    .skill-percent10 {
+        width: 10%;
+    }
+
+    .skill-percent0 {
+        width: 0%;
+    }
+}  
 /* footer */
 .footer {
     display: block;
