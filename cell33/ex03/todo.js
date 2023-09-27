@@ -1,5 +1,5 @@
 ////////todo list save data in cookie array//////////////
-let cookieArray = getCookieArray("todoArray");
+var cookieArray = getCookieArray("todoArray");
 
 ///After load page check cookie and load todo list from cookie.
 window.onload = function() {
@@ -103,36 +103,31 @@ function newElement() {
 }
 
 //if click close button delete li from list and cookie.
-deleteElement();
+document.addEventListener('click', function(event) {
+    if (event.target.className == 'close') {
+        deleteTodo();
+    }
+}, false);
 
-//Delete li from list and cookie
-function deleteElement() {
-    let close = document.getElementsByClassName("close");
+
+//delete tobo cookie and remove li from list.
+function deleteTodo() {
+    //deleted word of li from cookie
+    let li = event.target.parentElement;
+    let todo = li.textContent;
+    let todoArray = getCookieArray("todoArray");
+    todoArray = todoArray.split(",");
     let i = 0;
-    for (i = 0; i < close.length; i++) {
-        close[i].onclick = function() {
-            let div = this.parentElement;
-            let li = div.parentElement;
-            let ul = li.parentElement;
-            let value = li.textContent;
-            ul.removeChild(li);
-            deleteCookieArray("todoArray", value);
+    for (i = 0; i < todoArray.length; i++) {
+        if (todoArray[i] == todo) {
+            todoArray.splice(i, 1);
         }
     }
+    todoArray = todoArray.join(",");
+    setCookie("todoArray", todoArray, 1);
+    
+    //remove li from list
+    li.remove();
 }
 
-//delete cookie from array cookie
-function deleteCookieArray(cname, cvalue) {
-    let todoArray = getCookieArray(cname);
-    if (todoArray != "") {
-        todoArray = todoArray.split(",");
-        let i = 0;
-        for (i = 0; i < todoArray.length; i++) {
-            if (todoArray[i] == cvalue) {
-                todoArray.splice(i, 1);
-            }
-        }
-        todoArray = todoArray.join(",");
-        setCookie("todoArray", todoArray, 1);
-    }
-}
+
